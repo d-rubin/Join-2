@@ -334,11 +334,11 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  animation: full_contact_Info_Container_slide_in 450ms;
+  animation: full_contact_Info_Container_slide_in 225ms;
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-left: 5%;
+  left: 5%;
 }
 
 @keyframes full_contact_Info_Container_slide_in {
@@ -364,11 +364,6 @@ left: 5%;
 
 
 @media(max-width: 800px) {
-  /* h1 {
-        width: 4rem;
-        margin: 0;
-    } */
-
   .right_side_contacts_h4 {
     width: 1rem;
     text-align: center;
@@ -705,6 +700,10 @@ left: 5%;
   margin-left: 5%;
 }
 
+.closeContact {
+  display: none;
+}
+
 
 @media (max-width: 1500px) {
   .popup_right_profile {
@@ -862,7 +861,31 @@ left: 5%;
 
   .right_side {
     position: absolute;
-    display: none;
+    left: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 10;
+  }
+
+  .right_side_contacts {
+    align-items: center;
+  }
+
+  .full_contact_Info_Container {
+    width: 85%;
+    align-items: center;
+  }
+
+  .full_contact_info {
+    justify-content: center;
+  }
+
+  .closeContact {
+    position: absolute;
+    display: unset;
+    width: 7%;
+    right: 5%;
+    top: 2%;
   }
 
   .summary-greet-container-mobil {

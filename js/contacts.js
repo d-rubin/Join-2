@@ -307,11 +307,16 @@ async function showFullContactInfo(i) {
    let fullContactInfo = document.getElementById("full_contact_Info_Container");
    fullContactInfo.classList.remove("full_contact_Info_Container");
    fullContactInfo.innerHTML = "";
+   document.getElementById('right_side').style.left = '0%';
    setTimeout(() => {
       fullContactInfo.innerHTML = generateFullConatactHTML(i);
       fullContactInfo.classList.remove("d-none");
       fullContactInfo.classList.add("full_contact_Info_Container");
    }, 250);
+}
+
+function closeContact() {
+   document.getElementById('right_side').style.left = '100%';
 }
 
 function generateFullConatactHTML(i) {
