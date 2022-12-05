@@ -3,12 +3,7 @@ FONT-SIZE NUR IN REM! Standard => 1rem => 16px
 Breakpoint width zu mobil => 800px
 Variable Größen ändern!
 
--bei open task nicht scrollen => Daniel (done)
--boad fertig => Daniel (done)
--openTask & changeTAsk => Daniel (done)
 -Responsive Contact => Mato
-
--Bei Category Auswahl soll es die Möglichkeit geben, eine neue Category hinzuzufügen => Dennis (done)
 
 -Bei Contacts sollen die Anfangsbuchstaben gezeigt werden wie im Mockup => Mato
 
@@ -16,10 +11,4 @@ Variable Größen ändern!
 
 -Wenn ich als Nutzer auf den unscharfen Hintergrund klicke, soll sich der Slider schließen 
 
--Border bei Summary fixen => Dennis (done)
-
 -Add Task duedate wird über assigned to geschoben
-
--Begrüsung fixen => Dennis (done)
-
-- Summary headline optimieren (done)
