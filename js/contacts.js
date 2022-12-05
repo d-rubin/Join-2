@@ -304,10 +304,9 @@ async function removeContact(i) {
 }
 
 async function showFullContactInfo(i) {
-   document.getElementById("full_contact_Info_Container").classList.remove("d-none");
    let fullContactInfo = document.getElementById("full_contact_Info_Container");
-   fullContactInfo.innerHTML = "";
-   fullContactInfo.innerHTML += generateFullConatactHTML(i);
+   fullContactInfo.innerHTML = generateFullConatactHTML(i);
+   fullContactInfo.classList.remove("d-none"); 
 }
 
 function generateFullConatactHTML(i) {

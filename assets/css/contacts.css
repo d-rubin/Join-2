@@ -327,29 +327,27 @@
 .full_contact_Info_Container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  animation: full_contact_Info_Container_slide_in 2s;
+  position: absolute;
+  animation: full_contact_Info_Container_slide_in 450ms ease-in-out;
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 
 }
 
-
 @keyframes full_contact_Info_Container_slide_in {
-
+  0% {
+    left: 100%;
+  }
 
   50% {
-    left: 100vw;
+    left: 0%;
   }
 
   100% {
-    left: 0px;
+    left: 100%;
   }
 }
-
-
-
 
 .full_contact_info {
   height: 8rem;
