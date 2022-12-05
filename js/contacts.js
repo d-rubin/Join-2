@@ -3,7 +3,7 @@ let allUsersAndContacts;
 let contactColors = ["green", "blue", "blueviolet", "brown", "red", "yellow", "azure", "aqua", "orange", "deeppink"];
 let mediaForContact = window.matchMedia("(max-width: 992px)");
 let indexContact = 0;
-let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "M", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 async function getInfoFromNewContactField() {
    if (firstname.value != "") {
@@ -79,9 +79,9 @@ function listTemplate(index) {
 }
 
 function renderContacts() {
-   let listning = document.getElementById('listning');
-   listning.innerHTML = '';
-   for(let index = 0; index < letters.length; index++) {
+   let listning = document.getElementById("listning");
+   listning.innerHTML = "";
+   for (let index = 0; index < letters.length; index++) {
       listning.innerHTML += listTemplate(index);
    }
    for (let i = 0; i < contacts.length; i++) {
@@ -94,114 +94,114 @@ function renderContacts() {
 
 function contactSwitchCase(letter, i, letterContainer, contactContainer) {
    switch (letter) {
-      case 'A':
+      case "A":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'B':
+      case "B":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'A':
+      case "A":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'C':
+      case "C":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'D':
+      case "D":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'E':
+      case "E":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'F':
+      case "F":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'G':
+      case "G":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
-         break;   
-      case 'H':
-         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'I':
+      case "H":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'J':
+      case "I":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'K':
+      case "J":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'L':
+      case "K":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'M':
+      case "L":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'N':
+      case "M":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'O':
+      case "N":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
-         break;    
-      case 'P':
-         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'Q':
+      case "O":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'R':
+      case "P":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'S':
+      case "Q":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'T':
+      case "R":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'U':
+      case "S":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'V':
+      case "T":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
+         contactContainer.style.display = "unset";
          break;
-      case 'W':
+      case "U":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
-         break;   
-      case 'X':
+         contactContainer.style.display = "unset";
+         break;
+      case "V":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-          contactContainer.style.display = 'unset';
-        break;
-      case 'Y':
+         contactContainer.style.display = "unset";
+         break;
+      case "W":
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-         contactContainer.style.display = 'unset';
-         break;         
+         contactContainer.style.display = "unset";
+         break;
+      case "X":
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = "unset";
+         break;
+      case "Y":
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = "unset";
+         break;
       default:
          letterContainer.innerHTML += generateContactHTML(contacts[i], i);
-          contactContainer.style.display = 'unset';
-        break;
+         contactContainer.style.display = "unset";
+         break;
    }
 }
 
@@ -305,8 +305,13 @@ async function removeContact(i) {
 
 async function showFullContactInfo(i) {
    let fullContactInfo = document.getElementById("full_contact_Info_Container");
-   fullContactInfo.innerHTML = generateFullConatactHTML(i);
-   fullContactInfo.classList.remove("d-none"); 
+   fullContactInfo.classList.remove("full_contact_Info_Container");
+   fullContactInfo.innerHTML = "";
+   setTimeout(() => {
+      fullContactInfo.innerHTML = generateFullConatactHTML(i);
+      fullContactInfo.classList.remove("d-none");
+      fullContactInfo.classList.add("full_contact_Info_Container");
+   }, 250);
 }
 
 function generateFullConatactHTML(i) {
