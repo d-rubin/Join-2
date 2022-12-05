@@ -972,7 +972,7 @@
   }
 
 
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
 
     .popup_window {
       width: 100%;
@@ -1007,13 +1007,10 @@
   }
 
   @media (max-height: 670px) {
-    s .close_contact_popup {
+    .close_contact_popup {
       top: -18rem;
     }
-  }
-
-  @media (max-height: 600px) {
-    .close_contact_popup {
+      .close_contact_popup {
       top: -16rem;
     }
 
