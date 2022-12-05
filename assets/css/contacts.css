@@ -30,6 +30,7 @@
 
 }
 
+
 .contact_name h3 {
   font-size: 1.2rem;
 }
@@ -181,6 +182,11 @@
 .right_side_contacts h4 {
   font-size: 2rem;
 
+}
+
+.new_contact_button:hover {
+  background-color: #29ABE2;
+  border: none;
 }
 
 .new_contact_button {
@@ -1008,7 +1014,8 @@
     .close_contact_popup {
       top: -18rem;
     }
-      .close_contact_popup {
+
+    .close_contact_popup {
       top: -16rem;
     }
 
