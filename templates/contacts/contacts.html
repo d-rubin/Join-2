@@ -35,9 +35,10 @@
 
         <div class="popup_right">
             <div class="close_contact_popup" id="closeContactWindow" onclick="closeNewContactWindow()">
-                <img id="close_contact_btn" src="img/clear.png">
+                <img id="close_contact_btn" class="close-black" src="img/clear.png">
+                <img id="close_contact_btn_grey" class="close-white" src="img/clearGrey.png">
             </div>
-            <form action="" onsubmit="getInfoFromNewContactField(); return false;">
+            <form class="form_add_contact_popup" action="" onsubmit="getInfoFromNewContactField(); return false;">
                 <div class="fill_in_fields">
                     <div class="first_name">
                         <input type="text" placeholder="First name" minlength="3" id="firstname" required>
@@ -92,9 +93,11 @@
         </div>
 
         <div class="popup_right">
-            <div class="close_contact_popup" id="edit_closeContactWindow" onclick="closeEditContactWindow()">  <img id="edit_close_contact_btn" src="img/clear.png">
+            <div class="close_contact_popup" id="edit_closeContactWindow" onclick="closeEditContactWindow()"> <img
+                    id="edit_close_contact_btn" class="close-black" src="img/clear.png">
+                <img id="edit_close_contact_btn_grey" class="close-white" src="img/clearGrey.png">
             </div>
-            <form action="" onsubmit="editcontact(); return false;">
+            <form class="form_add_contact_popup" action="" onsubmit="editcontact(); return false;">
                 <div class="fill_in_fields">
                     <div class="first_name">
                         <input type="text" placeholder="First name" minlength="3" id="edit_firstname" required>
