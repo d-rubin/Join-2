@@ -772,6 +772,17 @@
   }
 }
 
+.crossline {
+  width: 95%;
+  height: 0%;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  margin-left: 5%;
+}
+
+.contactHeadline {
+  margin-left: 5%;
+}
+
 
 @media (max-width: 1400px) {
 

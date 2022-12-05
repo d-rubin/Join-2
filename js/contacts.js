@@ -3,6 +3,7 @@ let allUsersAndContacts;
 let contactColors = ["green", "blue", "blueviolet", "brown", "red", "yellow", "azure", "aqua", "orange", "deeppink"];
 let mediaForContact = window.matchMedia("(max-width: 992px)");
 let indexContact = 0;
+let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 async function getInfoFromNewContactField() {
    if (firstname.value != "") {
@@ -67,12 +68,140 @@ async function saveContactInBackend(contacts) {
    await backend.setItem("contacts", JSON.stringify(contacts));
 }
 
-function renderContacts() {
-   contacts.sort((a, b) => a.second_name.localeCompare(b.second_name));
+function listTemplate(index) {
+   return `
+      <div id="${letters[index]}" style="display: none">
+      <h2 class="contactHeadline">${letters[index]}</h2>
+      <div class="crossline"></div>
+      <div id="${letters[index]}-Contianer"></div>
+      </div>
+      `;
+}
 
-   document.getElementById("listning").innerHTML = "";
+function renderContacts() {
+   let listning = document.getElementById('listning');
+   listning.innerHTML = '';
+   for(let index = 0; index < letters.length; index++) {
+      listning.innerHTML += listTemplate(index);
+   }
    for (let i = 0; i < contacts.length; i++) {
-      document.getElementById("listning").innerHTML += generateContactHTML(contacts[i], i);
+      let letter = contacts[i].second_name[0].toUpperCase();
+      let letterContainer = document.getElementById(`${letter}-Contianer`);
+      let contactContainer = document.getElementById(`${letter}`);
+      contactSwitchCase(letter, i, letterContainer, contactContainer);
+   }
+}
+
+function contactSwitchCase(letter, i, letterContainer, contactContainer) {
+   switch (letter) {
+      case 'A':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'B':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'A':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'C':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'D':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'E':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'F':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'G':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;   
+      case 'H':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'I':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'J':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'K':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'L':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'M':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'N':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'O':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;    
+      case 'P':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'Q':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'R':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'S':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'T':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'U':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'V':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;
+      case 'W':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;   
+      case 'X':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+          contactContainer.style.display = 'unset';
+        break;
+      case 'Y':
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+         contactContainer.style.display = 'unset';
+         break;         
+      default:
+         letterContainer.innerHTML += generateContactHTML(contacts[i], i);
+          contactContainer.style.display = 'unset';
+        break;
    }
 }
 
