@@ -227,6 +227,7 @@ function loadAllTasks() {
 }
 
 function openNewContactWindow() {
+   document.getElementById("contactsContainer").classList.add("d-none");
    document.getElementById("popupAddContact").classList.remove("d-none");
    document.getElementById("contactsContainer").style = "filter: blur(10px)";
    document.getElementById("headerAllSide").style = "filter: blur(10px)";
@@ -239,6 +240,7 @@ function openNewContactWindow() {
 
 function openEditContactWindow(i) {
    indexContact = i;
+   document.getElementById("contactsContainer").classList.add("d-none");
    document.getElementById("popupEditContact").classList.remove("d-none");
    document.getElementById("edit_firstname").value = contacts[i].first_name;
    document.getElementById("edit_secondname").value = contacts[i].second_name;
@@ -264,15 +266,15 @@ function closeNewContactWindow() {
    document.getElementById("phone").value = ``;
    document.getElementById("popupAddContact").style = "animation: slideout 0.3s;";
    document.getElementById("popupAddContact").classList.remove("popup_window_slidein");
-   document.getElementById("popupAddContact").classList.remove("popup_window_slidein");
    document.getElementById("popupAddContact").classList.add("popup_window_slideout");
    document.getElementById("contactsContainer").style = "filter: none;";
    document.getElementById("headerAllSide").style = "filter: none";
    document.getElementById("navBarAllSide").style = "filter: none";
+   document.getElementById("popupAddContact").style = "transform: translateX(100vw)";
    setTimeout(() => {
       document.getElementById("popupAddContact").classList.add("d-none");
       document.getElementById("contactsContainer").style = "filter: none;";
-      document.getElementById("popupAddContact").style = "transform: translateX(100vw)";
+      document.getElementById("contactsContainer").classList.remove("d-none");
    }, 300);
 }
 
@@ -283,15 +285,15 @@ function closeEditContactWindow() {
    document.getElementById("edit_phone").value = ``;
    document.getElementById("popupEditContact").style = "animation: slideout 0.3s;";
    document.getElementById("popupEditContact").classList.remove("popup_window_slidein");
-   document.getElementById("popupEditContact").classList.remove("popup_window_slidein");
    document.getElementById("popupEditContact").classList.add("popup_window_slideout");
    document.getElementById("contactsContainer").style = "filter: none;";
    document.getElementById("headerAllSide").style = "filter: none";
    document.getElementById("navBarAllSide").style = "filter: none";
+   document.getElementById("popupEditContact").style = "transform: translateX(100vw)";
    setTimeout(() => {
       document.getElementById("popupEditContact").classList.add("d-none");
       document.getElementById("contactsContainer").style = "filter: none;";
-      document.getElementById("popupEditContact").style = "transform: translateX(100vw)";
+      document.getElementById("contactsContainer").classList.remove("d-none");
    }, 300);
 }
 
