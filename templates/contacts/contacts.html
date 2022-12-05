@@ -30,7 +30,6 @@
                 <h1>Add contact</h1>
                 <p>Tasks are better with a team!</p>
                 <div class="underline_img"></div>
-
             </div>
         </div>
 
@@ -80,16 +79,21 @@
 
 <div class="popup d-none" id="popupEditContact">
     <div class="popup_window">
+
         <div class="popup_left">
-            <div class="popup_left_img">
-                <img src="img/joinlogo4.png">
+            <div class="container-left-popup-text">
+                <div class="popup_left_img">
+                    <img src="img/joinlogo4.png">
+                </div>
+                <h1>Edit contact</h1>
+                <p>Tasks are better with a team!</p>
+                <div class="underline_img"></div>
             </div>
-            <h1>Edit contact</h1>
-            <p>Tasks are better with a team!</p>
-            <div class="underline_img"><img src="img/underline.png"></div>
         </div>
 
         <div class="popup_right">
+            <div class="close_contact_popup" id="edit_closeContactWindow" onclick="closeEditContactWindow()">  <img id="edit_close_contact_btn" src="img/clear.png">
+            </div>
             <form action="" onsubmit="editcontact(); return false;">
                 <div class="fill_in_fields">
                     <div class="first_name">
@@ -123,9 +127,7 @@
                 </div>
             </form>
         </div>
-        <div class="close_contact_popup" id="edit_closeContactWindow" onclick="closeEditContactWindow()">
-            <img id="edit_close_contact_btn" src="img/clear.png">
-        </div>
+
         <div class="popup_right_profile">
             <img src="img/profileicon2.png">
         </div>
