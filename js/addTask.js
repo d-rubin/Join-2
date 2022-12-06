@@ -150,10 +150,10 @@ function addSubtaskAddTask() {
 
 function changeSubtaskAddTask(index) {
    let img = document.getElementById(`subtask${index}`);
-   if (img.src == "https://gruppe-340.developerakademie.net/Join/assets/img/addTask_rectangle.png") {
+   if (img.src == "https://daniel-rubin.developerakademie.net/Join-2/assets/img/addTask_rectangle.png") {
       currentInstance.splice(index, 1, "done");
       img.src = "assets/img/checkbox.png";
-   } else if (img.src == "https://gruppe-340.developerakademie.net/Join/assets/img/checkbox.png") {
+   } else if (img.src == "https://daniel-rubin.developerakademie.net/Join-2/assets/img/checkbox.png") {
       img.src = "assets/img/addTask_rectangle.png";
       currentInstance.splice(index, 1, "todo");
    }
@@ -167,7 +167,6 @@ async function createTodoFromAddTask() {
    changeColorAfterCreateTask();
    closeForm();
    changePrior();
-   resetCheckboxesAddTask();
    subtaskCount = 0;
    index++;
    currentPrior = "Low";
@@ -179,12 +178,6 @@ function createTaskNotification() {
    setTimeout(() => {
       document.getElementById("createNotification").classList.add("d-none");
    }, 2000);
-}
-
-function resetCheckboxesAddTask() {
-   for (let i = 0; i < allUsersAndContacts.length; i++) {
-      document.getElementById(`addTaskAssignedToCheckbox${i}`).src = "assets/img/addTask_rectangle.png";
-   }
 }
 
 async function updateArrayTodo() {

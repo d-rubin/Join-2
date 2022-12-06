@@ -201,7 +201,7 @@
     cursor: pointer;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    min-height: 10rem;
+    min-height: 13rem;
 
 }
 
@@ -227,6 +227,8 @@
     line-height: 120%;
     word-break: break-all;
     margin-bottom: 0.5rem;
+    overflow-y: hidden;
+    height: 25%;
 }
 
 .description {
@@ -237,6 +239,8 @@
     word-break: break-all;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    overflow-y: hidden;
+    height: 25%;
 }
 
 .assigned {
@@ -260,7 +264,7 @@
 
 .assigned-sort-name {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: initial;
 }
 
@@ -423,8 +427,8 @@
 .subTasksCrossPopup {
     position: absolute;
     right: 3%;
-    top: 20%;
-    width: 6%;
+    top: 25%;
+    height: 50%;
     cursor: pointer;
 }
 
@@ -667,16 +671,6 @@
     cursor: pointer;
 }
 
-/* .openTaskPriorImgFirst {
-    position: absolute;
-    right: 1rem;
-} */
-
-/* .openTaskPriorImgSecond {
-    position: absolute;
-    top: 0.5rem;
-} */
-
 .positionMediumChangeTaskFirst {
     position: absolute;
     left: 2px;
@@ -822,8 +816,14 @@
 
     .box {
         width: 22.5vw;
+        height: 83%;
         margin-left: 1rem;
         margin-right: 1rem;
+        min-height: unset;
+    }
+
+    .title, .description {
+        height: 20%;
     }
 
     #todo,
