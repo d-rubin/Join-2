@@ -280,16 +280,19 @@
 .edit_contact {
   display: flex;
   align-items: center;
-
+  border: 1px solid transparent;
+  border-radius: 5px;
   margin-left: 1.5rem;
+  padding: 5px;
+  cursor: pointer;
+}
 
+.edit_contact:hover {
+  border: 1px solid #2A3647;
 }
 
 
-
-
 .edit_contact p {
-  cursor: context-menu !important;
   margin: 0 0 0 8px;
 }
 

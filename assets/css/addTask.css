@@ -214,7 +214,7 @@ option {
 }
 
 .urgent-bg-color {
-    background-color: #FF3D00;
+    background-color: #FF3D00 !important;
     color: white;
 }
 
@@ -240,7 +240,7 @@ option {
 }
 
 .medium-bg-color {
-    background-color: #FFA800;
+    background-color: #FFA800 !important;
     color: #ffffff;
 }
 
@@ -308,7 +308,7 @@ option {
 }
 
 .low-bg-color {
-    background-color: #7AE229;
+    background-color: #7AE229 !important;
     color: white;
 }
 
