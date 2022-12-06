@@ -590,6 +590,7 @@ function openTaskTemplate(i) {
         <div id="openTaskAssignedToContainer"></div>
         <p class="openTaskSubtasks">Subtasks:</p>
         <div id="openTaskSubtasks" class="openTaskSubtasksContainer"></div>
+        <img class="openTrashChangeImg" id="openTaskTrashImg" onclick="trashTask(${i})" src="img/trash-2-32.png" alt="change">
         <img class="openTaskChangeImg" id="openTaskChangeImg" onclick="changeTask(${i})" src="img/changeButton.png" alt="change">
     </div>`;
 }

@@ -639,6 +639,16 @@
     background-color: #2A3647;
 }
 
+.openTrashChangeImg {
+     padding: 0.5rem 0.8rem;
+     position: fixed;
+     height: 3%;
+     right: 35%;
+     bottom: 12%;
+     border-radius: 10px;
+     background-color: #2A3647;
+ }
+
 #changeTaskTitle,
 #changeTaskDescription,
 #changeTaskAssingedToSelect,
@@ -666,10 +676,11 @@
     top: -30px;
 }
 
-.openTaskChangeImg:hover {
+.openTaskChangeImg:hover, .openTrashChangeImg:hover {
     cursor: pointer;
     background-color: #0190E0;
 }
+
 
 .openTaskCloseImg:hover {
     cursor: pointer;
@@ -898,6 +909,16 @@
         border-radius: 10px;
         background-color: #2A3647;
     }
+
+        .openTrashChangeImg {
+            padding: 0.4rem 0.8rem;
+            position: fixed;
+            height: 5%;
+            right: 25%;
+            bottom: 14%;
+            border-radius: 10px;
+            background-color: #2A3647;
+        }
 
     .addChanges {
         position: fixed;
