@@ -138,26 +138,26 @@
     </div>
 </div>
 
-<form onsubmit="createTodoPopupContacts(); return false;">
+<form id="popup-contact" class="popup d-none" onsubmit="createTodoPopupContacts(); return false;">
     <div id="popup-windowContacts" class="add-task-pop-up">
-        <div class="cross-popup"><img onclick="closeFormContacts()" src="assets/img/board/close-popup.svg"></div>
+        <div onclick="closeFormContacts()" class="cross-popup"><img src="assets/img/board/close-popup.svg"></div>
         <div class="padding-popup-box">
 
-            <p class="addTaskMobileHeadline">Kanban Project Management Tool</p>
+            <h1>Add Task</h1>
+            <div class="container-for-seperate-left-and-right-content-popup">
+                <div class="first-container-popup">
 
-            <div class="title-pop-up">Add Task</div>
-            <div class="container-for-seperate-left-and-right-content">
-                <div>
-                    <div class="margin-popup"><label class="pop-up-child" for="title">Title</label><br></div>
-                    <input class="title-popup" type="text" id="titlePopupContacts" placeholder="Enter a title">
+                    <h2>Title</h2>
+                    <input class="title-popup" type="text" id="titlePopupContacts" name="title"
+                        placeholder="Enter a title" 
+                        required>
 
-                    <div class="margin-popup"><label class="pop-up-child" for="descriptionPopup">Description</label><br>
-                    </div>
-                    <textarea class="description-popup" type="text" id="descriptionPopupContacts" rows="5" cols="20"
-                        placeholder="Enter a Description"></textarea>
+                    <h2>Description</h2>
+                    <textarea class="description-popup" type="text" id="descriptionPopupContacts"
+                        name="descriptionPopup" rows="5" cols="20" placeholder="Enter a Description"
+                        required></textarea>
 
-                    <div class="margin-popup"><label class="pop-up-child" for="category-popup">Category</label><br>
-                    </div>
+                    <h2>Category</h2>
                     <select class="category-popup" id="category-popupContacts">
                         <option value="Sales">Sales</option>
                         <option value="Design">Design</option>
@@ -167,9 +167,8 @@
                         <option value="Media">Media</option>
                     </select><br>
 
-                    <div class="margin-popup"><label class="pop-up-child" for="assignedto-popup">Assigned to</label><br>
-                    </div>
-                    <form>
+                    <h2>Assigned to</h2>
+                    <form class="margin-popup">
                         <div class="multiselect">
                             <div class="selectBox" onclick="setAllUserAndContactsToAssignedContacts()">
                                 <select class="assignedto-popup">
@@ -177,22 +176,21 @@
                                 </select>
                                 <div class="overSelect"></div>
                             </div>
-                            <div id="assignedtoContacts" class="assignedToSelect"></div>
+                            <div id="assignedto-popupContacts" class="category-popup"></div>
                         </div>
                     </form>
                 </div>
 
-                <div class="seperate-line-popup">
+                <div class="seperate-line-popup"></div>
 
-                </div>
+                <div class="second-container-popup">
+                    <h2>Due Date</h2>
+                    <input class="duedate-popup" type="date" id="duedatePopupContacts" name="duedate" required>
 
-                <div>
-                    <div class="margin-popup"><label class="pop-up-child" for="duedate">Due Date</label></div>
-                    <input class="duedate-popup" type="date" id="duedatePopupContacts" name="duedate">
-
-                    <div class="margin-popup pop-up-child">Prio</div>
+                <h2>Prio</h2>
                     <div class="prio-popup">
-                        <div id="urgentPopupContacts" onclick="changeColorUrgentContacts()" class="urgent-popup">Urgent
+                        <div id="urgentPopupContacts" onclick="changeColorUrgentContacts()" class="urgent-popup">
+                            Urgent
                             <div class="urgent-popup-child">
                                 <div class="position-urgent-arrow-popup-first"><img id="urgentFirstPopupContacts"
                                         src="assets/img/board/arrow-urgent.svg"></div>
@@ -205,7 +203,8 @@
                                 <div class="position-medium-arrow-popup-firstPopup"><img id="mediumFirstPopupContacts"
                                         src="assets/img/board/arrow-medium.svg"></div>
                                 <div class="position-medium-arrow-popup-secondPopup"><img id="mediumSecondPopupContacts"
-                                        src="assets/img/board/arrow-medium.svg"></div>
+                                        src="assets/img/board/arrow-medium.svg">
+                                </div>
                             </div>
                         </div>
                         <div id="lowPopupContacts" onclick="changeColorLowContacts()" class="low-popup">Low
@@ -217,21 +216,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="margin-popup pop-up-child">Subtasks</div>
+
+                <h2>Subtasks</h2>
+                <div class="subtasksContainer">
                     <input class="addTaskSubTasksInput" id="addSubtasksInputPopupContacts" type="text"
                         placeholder="Add new subtask">
                     <img class="subTasksCrossPopup" src="assets/img/addTask_cross.png"
                         onclick="addSubtaskPopupContacts()">
+                        </div>
                     <div class="subTaskFrame" id="addSubtasksListPopupContacts">
                     </div>
                     <div class="btn-popup">
-                        <button onclick="closeFormContacts()" id="btn-firstPopupContacts" class="first-btn">Cancel<img
+                        <button  type="button" onclick="closeFormContacts()" id="btn-firstPopupContacts" class="first-btn">Cancel<img
                                 class="cross-popup-btn" src="assets/img/board/close-popup.svg"></button>
                         <button type="submit" value="submit" class="second-btn">Create Task<img
                                 src="assets/img/board/hook-popup.svg"></button>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
+
 </form>
+<div class="Notification d-none" id="createNotificationContacts">
+    Task created!
+</div>
+<div class="Notification d-none" id="createNotificationContactsAdd">
+    Contact created!
+</div>

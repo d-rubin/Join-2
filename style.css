@@ -121,6 +121,7 @@ select {
 
 #assignedto,
 #assignedto-popup,
+#assignedto-popupContacts,
 #changeTaskAssingedToSelect {
     display: none;
     border: 1px #dadada solid;
@@ -129,12 +130,14 @@ select {
 
 #assignedto label,
 #assignedto-popup label,
+#assignedto-popupContacts label,
 #changeTaskAssingedToSelect label {
     display: block;
 }
 
 #assignedto label:hover,
 #assignedto-popup label:hover,
+#assignedto-popupContacts label:hover,
 #changeTaskAssingedToSelect label:hover {
     background-color: #1e90ff;
 }
@@ -185,4 +188,3 @@ select {
 .summary-greet-container-mobil {
     display: none;
 }
-

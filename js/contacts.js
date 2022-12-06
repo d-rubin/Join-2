@@ -14,6 +14,7 @@ async function getInfoFromNewContactField() {
    closeNewContactWindow();
    renderContacts();
    checkMediaforExitButton(mediaForContact);
+   createTaskNotificationContactsAdd();
 }
 
 function createNewContact() {
@@ -307,7 +308,7 @@ async function showFullContactInfo(i) {
    let fullContactInfo = document.getElementById("full_contact_Info_Container");
    fullContactInfo.classList.remove("full_contact_Info_Container");
    fullContactInfo.innerHTML = "";
-   document.getElementById('right_side').style.left = '0%';
+   document.getElementById("right_side").style.left = "0%";
    setTimeout(() => {
       fullContactInfo.innerHTML = generateFullConatactHTML(i);
       fullContactInfo.classList.remove("d-none");
@@ -316,7 +317,7 @@ async function showFullContactInfo(i) {
 }
 
 function closeContact() {
-   document.getElementById('right_side').style.left = '100%';
+   document.getElementById("right_side").style.left = "100%";
 }
 
 function generateFullConatactHTML(i) {
@@ -343,7 +344,7 @@ function generateFullConatactHTML(i) {
    <div class="contact_information">
    <div class="block-contact_information">    
    <div class="contacts-information">Email</div>
-       <a href="#">${contacts[i].email}</a>
+       <a href="mailto:${contacts[i].email}">${contacts[i].email}</a>
        </div>
        <div class="block-contact_information">    
        <div class="contacts-information">Phone</div>
@@ -374,6 +375,7 @@ function checkMediaforExitButton(mediaForContact) {
 }
 
 function openFormContacts() {
+   document.getElementById("popup-contact").classList.remove("d-none");
    document.getElementById("popup-windowContacts").style.display = "unset";
    setAllUserAndContactsAssignedToPopupContacts();
 }
@@ -383,14 +385,27 @@ function setAllUserAndContactsAssignedToPopupContacts() {
    let assignCount = 0;
    let optionTag = document.getElementById("assignedto-popupContacts");
    optionTag.innerHTML = " ";
-   allUsersAndContacts.forEach((user) => {
-      currentAssigned.push("");
-      optionTag.innerHTML += `<div class="assignedToValue"><p>${user.second_name} ${user.first_name}</p><img id="popupAssignedToCheckboxContacts${assignCount}" src="assets/img/addTask_rectangle.png" onclick="changeAssignPopupContacts(${assignCount})"></div>`;
-      assignCount += 1;
-   });
+   if (!expanded) {
+      allUsersAndContacts.forEach((user) => {
+         currentAssigned.push("");
+         optionTag.innerHTML += `
+            <label>
+        <input class="inputCheckboxField" type="checkbox" onclick="changeAssignPopupContacts(${assignCount + 200})" id="Check3${assignCount}"/>${
+            user.second_name
+         } ${user.first_name}</label>
+`;
+         optionTag.style.display = "block";
+         expanded = true;
+         assignCount += 1;
+      });
+   } else {
+      optionTag.style.display = "none";
+      expanded = false;
+   }
 }
 
 function closeFormContacts() {
+   document.getElementById("popup-contact").classList.add("d-none");
    document.getElementById("popup-windowContacts").style.display = "none";
    let titlePopup = document.getElementById("titlePopupContacts");
    let descriptionPopup = document.getElementById("descriptionPopupContacts");
@@ -427,12 +442,11 @@ function resetCheckboxesPopupContacts() {
 }
 
 function changeAssignPopupContacts(assignCount) {
-   let img = document.getElementById(`popupAssignedToCheckboxContacts${assignCount}`);
-   if (img.src == "https://gruppe-340.developerakademie.net/Join/assets/img/addTask_rectangle.png") {
+   assignCount -= 200;
+   let valueCheck = document.getElementById(`3${assignCount}`);
+   if (valueCheck.checked) {
       currentAssigned.splice(assignCount, 1, allUsersAndContacts[assignCount].second_name);
-      img.src = "assets/img/checkbox.png";
-   } else if (img.src == "https://gruppe-340.developerakademie.net/Join/assets/img/checkbox.png") {
-      img.src = "assets/img/addTask_rectangle.png";
+   } else {
       currentAssigned.splice(assignCount, 1, "");
    }
 }
@@ -541,14 +555,16 @@ function addSubtaskPopupContacts() {
 function setAllUserAndContactsToAssignedContacts() {
    allUsersAndContacts = [].concat(contacts, users);
    let assignCount = 0;
-   let optionTag = document.getElementById("assignedtoContacts");
+   let optionTag = document.getElementById("assignedto-popupContacts");
    optionTag.innerHTML = " ";
    if (!expanded) {
       allUsersAndContacts.forEach((user) => {
          currentAssigned.push("");
          optionTag.innerHTML += `
             <label>
-        <input class="inputCheckboxField" type="checkbox" onclick="changeAssign(${assignCount})" id="Check${assignCount}"/>${user.second_name} ${user.first_name}</label>
+         <input class="inputCheckboxField" type="checkbox" onclick="changeAssignPopupContacts(${assignCount + 200})" id="Check3${assignCount}"/>${
+            user.second_name
+         } ${user.first_name}</label>
 `;
          optionTag.style.display = "block";
          expanded = true;
@@ -557,6 +573,16 @@ function setAllUserAndContactsToAssignedContacts() {
    } else {
       optionTag.style.display = "none";
       expanded = false;
+   }
+}
+
+function changeAssignPopupContacts(assignCount) {
+   assignCount -= 200;
+   let valueCheck = document.getElementById(`Check3${assignCount}`);
+   if (valueCheck.checked) {
+      currentAssigned.splice(assignCount, 1, allUsersAndContacts[assignCount].second_name);
+   } else {
+      currentAssigned.splice(assignCount, 1, "");
    }
 }
 
@@ -572,6 +598,21 @@ function createTodoPopupContacts() {
    subtaskCount = 0;
    index++;
    currentPrior = "Low";
+   createTaskNotificationContacts();
+}
+
+function createTaskNotificationContacts() {
+   document.getElementById("createNotificationContacts").classList.remove("d-none");
+   setTimeout(() => {
+      document.getElementById("createNotificationContacts").classList.add("d-none");
+   }, 2000);
+}
+
+function createTaskNotificationContactsAdd() {
+   document.getElementById("createNotificationContactsAdd").classList.remove("d-none");
+   setTimeout(() => {
+      document.getElementById("createNotificationContactsAdd").classList.add("d-none");
+   }, 2000);
 }
 
 function updateArrayTodoPopupContacts() {

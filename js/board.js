@@ -33,13 +33,15 @@ async function createTodoPopup() {
    subtaskCount = 0;
    index++;
    currentPrior = "Low";
+     createTaskNotificationBoard();
 }
 
-// function resetCheckboxesPopup() {
-//    for (let i = 0; i < allUsersAndContacts.lenght; i++) {
-//       document.getElementById(`popupAssignedToCheckbox${i}`).src = "https://gruppe-340.developerakademie.net/Join/assets/img/addTask_rectangle.png";
-//    }
-// }
+function createTaskNotificationBoard() {
+   document.getElementById("createNotificationBoard").classList.remove("d-none");
+   setTimeout(() => {
+      document.getElementById("createNotificationBoard").classList.add("d-none");
+   }, 2000);
+}
 
 /*
  * change color prior in task box
@@ -354,7 +356,7 @@ function changeColorLowReverse() {
  * open the pop-up
  */
 function openForm() {
-   document.getElementById('popup').classList.remove('d-none');
+   document.getElementById("popup").classList.remove("d-none");
    document.getElementById("popup-window").style.display = "unset";
    document.getElementById("mainContainer").style.opacity = "0.5";
 }
@@ -397,7 +399,7 @@ function changeAssignPopup(assignCount) {
  * close the pop-up
  */
 function closeForm() {
-   document.getElementById('popup').classList.add('d-none');
+   document.getElementById("popup").classList.add("d-none");
    document.getElementById("popup-window").style.display = "none";
    document.getElementById("mainContainer").style.opacity = "unset";
    currentTitle = document.getElementById("title");
@@ -504,7 +506,7 @@ function openTask(i) {
    let openTask = document.getElementById("openTask");
    if (openTask.innerHTML == "") {
       openTask.classList.add("z10");
-      openTask.classList.remove('z-1');
+      openTask.classList.remove("z-1");
       openTask.innerHTML += openTaskTemplate(i);
       openTaskChangePrior(i);
       changeColorOfOpenTask();
@@ -617,7 +619,7 @@ function openTaskClose() {
    let openTask = document.getElementById("openTask");
    openTask.innerHTML = "";
    openTask.classList.remove("z10");
-   openTask.classList.add('z-1');
+   openTask.classList.add("z-1");
    document.getElementById("openTask").classList.remove("gap-0");
 }
 
@@ -891,5 +893,3 @@ function filterTasks() {
       }
    }
 }
-
-

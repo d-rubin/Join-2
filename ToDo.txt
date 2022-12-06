@@ -3,14 +3,6 @@ FONT-SIZE NUR IN REM! Standard => 1rem => 16px
 Breakpoint width zu mobil => 800px
 Variable Größen ändern!
 
--Responsive Contact => Mato
-
--Bei Contacts sollen die Anfangsbuchstaben gezeigt werden wie im Mockup => Mato
-
--Animation Contacts überarbeiten => Mato
-
--Wenn ich als Nutzer auf den unscharfen Hintergrund klicke, soll sich der Slider schließen 
-
--Add Task duedate wird über assigned to geschoben
-
-TEST
+-Möglichkeit einen Task zu löschen fehlt
+-Wenn ein Task geöffnet wird, werden die aktuelle assigned nicht angezeigt. Auch die aktuelle Categorie wird nicht ausgewählt.
+-Bei der Taskerstellung, wenn Namen ausgewählt sind, der Dropdown geschlossen wird und dann wieder geöffnet, sind die Hacken verschwunden.

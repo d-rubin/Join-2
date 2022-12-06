@@ -8,7 +8,7 @@
             <div class="inputfield-container">
                 <input onkeydown="deleteIconInSearchInputField()" onkeyup="loadIconAndLine(), filterTasks()"
                     class="inputfield" type="text" id="searchTask" name="searchTask" placeholder="Find Task">
-                <!-- <div id="line" class="line-container"><span class="line"></span></div> -->
+                <div id="line" class="line-container"><span class="line"></span></div>
                 <div id="iconSearch" class="search-container">
                     <img src="assets/img/board/search-icon.svg">
                 </div>
@@ -69,7 +69,7 @@
     <div id="popup-window" class="add-task-pop-up">
         <div onclick="closeForm()" class="cross-popup"><img src="assets/img/board/close-popup.svg"></div>
         <div class="padding-popup-box">
-            
+
             <h1>Add Task</h1>
             <div class="container-for-seperate-left-and-right-content-popup">
                 <div class="first-container-popup">
@@ -80,7 +80,7 @@
 
                     <h2>Description</h2>
                     <textarea class="description-popup" type="text" id="descriptionPopup" name="descriptionPopup"
-                    rows="5" cols="20" placeholder="Enter a Description" required></textarea>
+                        rows="5" cols="20" placeholder="Enter a Description" required></textarea>
 
                     <h2>Category</h2>
                     <select class="category-popup" id="category-popup">
@@ -114,7 +114,9 @@
 
                     <h2>Prio</h2>
                     <div class="prio-popup">
-                        <div id="urgentPopup" onclick="changeColorUrgent()" class="urgent-popup">Urgent
+                        <div id="urgentPopup" onclick="changeColorUrgent()"
+                        class="urgent-popup">
+                        Urgent
                             <div class="urgent-popup-child">
                                 <div class="position-urgent-arrow-popup-first"><img id="urgentFirstPopup"
                                         src="assets/img/board/arrow-urgent.svg"></div>
@@ -124,21 +126,26 @@
                         </div>
                         <div id="mediumPopup" onclick="changeColorMedium()" class="medium-popup">Medium
                             <div class="medium-popup-child">
-                                <div class="position-medium-arrow-popup-firstPopup"><img id="mediumFirstPopup" src="assets/img/board/arrow-medium.svg"></div>
-                                <div class="position-medium-arrow-popup-secondPopup"><img id="mediumSecondPopup" src="assets/img/board/arrow-medium.svg"></div>
+                                <div class="position-medium-arrow-popup-firstPopup"><img id="mediumFirstPopup"
+                                        src="assets/img/board/arrow-medium.svg"></div>
+                                <div class="position-medium-arrow-popup-secondPopup"><img id="mediumSecondPopup"
+                                        src="assets/img/board/arrow-medium.svg"></div>
                             </div>
                         </div>
                         <div id="lowPopup" onclick="changeColorLow()" class="low-popup">Low
                             <div class="low-popup-child">
-                                <div class="position-low-arrow-popup-firstPopup"><img id="lowFirstPopup" src="assets/img/board/arrow-low.svg"></div>
-                                <div class="position-low-arrow-popup-secondPopup"><img id="lowSecondPopup" src="assets/img/board/arrow-low.svg"></div>
+                                <div class="position-low-arrow-popup-firstPopup"><img id="lowFirstPopup"
+                                        src="assets/img/board/arrow-low.svg"></div>
+                                <div class="position-low-arrow-popup-secondPopup"><img id="lowSecondPopup"
+                                        src="assets/img/board/arrow-low.svg"></div>
                             </div>
                         </div>
                     </div>
 
                     <h2>Subtasks</h2>
                     <div class="subtasksContainer">
-                        <input class="addTaskSubTasksInput" id="addSubtasksInputPopup" type="text" placeholder="Add new subtask">
+                        <input class="addTaskSubTasksInput" id="addSubtasksInputPopup" type="text"
+                            placeholder="Add new subtask">
                         <img class="subTasksCrossPopup" src="assets/img/addTask_cross.png" onclick="addSubtaskPopup()">
                     </div>
                     <div class="subTaskFrame" id="addSubtasksListPopup"></div>
@@ -154,3 +161,6 @@
         </div>
     </div>
 </form>
+<div class="Notification d-none" id="createNotificationBoard">
+    Task created!
+</div>
