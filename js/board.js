@@ -595,6 +595,12 @@ function openTaskTemplate(i) {
     </div>`;
 }
 
+function trashTask(i) {
+   toDosArray.splice(i, 1);
+   openTaskClose();
+   updateTasks();
+}
+
 function openTaskChangePrior(i) {
    let priority = toDosArray[i].prio;
    if (priority == "Urgent") {
@@ -716,7 +722,7 @@ function changeTask(i) {
    let description = document.getElementById("openTaskDescription").innerHTML;
    let dueToDate = document.getElementById("openTaskDueDateValue").innerHTML;
    let prio = document.getElementById("openTaskPrioText").innerHTML;
-   document.getElementById("openTaskMain").innerHTML = changeTaskTemplate(title, description, dueToDate, i);
+   document.getElementById("openTaskMain").innerHTML = changeTaskTemplate(title, description, dueToDate, i, assigned);
    document.getElementById("openTaskMain").classList.add("gap-0");
    loadColorOpenTaskPrior(prio);
    setAllUserAndContactsToChangeTask();
