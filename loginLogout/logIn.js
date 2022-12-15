@@ -4,7 +4,7 @@ let rmCheck;
 let emailInput;
 let emailReset;
 
-setURL("https://gruppe-340.developerakademie.net/smallest_backend_ever");
+setURL("https://daniel-rubin.developerakademie.net/smallest_backend_ever");
 
 /**
  * loading all data from the backend
