@@ -4,7 +4,7 @@ let rmCheck;
 let emailInput;
 let emailReset;
 
-setURL("https://daniel-rubin.developerakademie.net/smallest_backend_ever");
+setURL("https://join.daniel-rubin.de/smallest_backend_ever");
 
 /**
  * loading all data from the backend
@@ -103,7 +103,7 @@ function forwardOntoLandingPage() {
 async function logInGuest() {
    currentUserFirstname = "Guest";
    await saveCurrentUserFirstnameInBackend(currentUserFirstname);
-   window.open("../landingpage.html", "_self");
+   window.open("landingpage.html", "_self");
 }
 // -------------------------------
 function sleep(miliseconds) {
